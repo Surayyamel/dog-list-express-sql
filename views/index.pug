@@ -1,0 +1,12 @@
+extends base.pug
+
+block content
+  
+    h1 Enter your dog's name!
+        form(action="/submit", method="post")
+            input(type="text", name="dogName" required)
+            input(type="submit", name="done")
+
+    ul
+        each val in rowList
+            li= val
